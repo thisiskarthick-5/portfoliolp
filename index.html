@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>lakshmi portfolio</title>
   <style>
+    /* existing styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: "Segoe UI", sans-serif;
       background: #0e0e14;
       color: #e2e2e2;
       line-height: 1.6;
     }
-
     header {
       background: #16161e;
       color: white;
@@ -27,29 +26,24 @@
       padding: 1rem 2rem;
       flex-wrap: wrap;
     }
-
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
     }
-
     nav {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       font-size: 0.95rem;
       transition: color 0.3s;
     }
-
     nav a:hover {
       color: #1ec9a0;
     }
-
     .hero {
       display: flex;
       flex-direction: column-reverse;
@@ -58,191 +52,57 @@
       text-align: center;
       background: #12121a;
     }
-
     .hero-text {
       max-width: 500px;
     }
-
     .hero-text h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-
     .hero-text h1 span {
       color: #1ec9a0;
     }
-
     .hero-text p {
       margin: 0.5rem 0;
     }
-
-   .hero-img img {
-  width: 100%;
-  max-width: 220px;
-  aspect-ratio: 1/1; /* Keeps image square */
-  object-fit: cover; /* Prevents distortion */
-  border-radius: 50%;
-  border: 4px solid #1ec9a0;
-  box-shadow: 0 0 20px rgba(30, 201, 160, 0.4);
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Floating animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-    .hero-img {
-  position: relative;
-  display: inline-block;
-}
-
-.hero-img {
-  position: relative;
-  display: inline-block;
-}
-
-.butterfly-emoji {
-  position: absolute;
-  font-size: 1.5rem;
-  animation: floatAround 6s ease-in-out infinite;
-  z-index: 2;
-  opacity: 0.9;
-}
-
-.butterfly-emoji.one {
-  top: -20px;
-  left: 50%;
-  animation-delay: 0s;
-  animation-duration: 5s;
-}
-
-.butterfly-emoji.two {
-  top: 0%;
-  left: -20px;
-  animation-delay: 1s;
-  animation-duration: 7s;
-}
-
-.butterfly-emoji.three {
-  bottom: -20px;
-  left: 40%;
-  animation-delay: 2s;
-  animation-duration: 6s;
-}
-
-.butterfly-emoji.four {
-  top: 60%;
-  right: -20px;
-  animation-delay: 1.5s;
-  animation-duration: 8s;
-}
-
-.butterfly-emoji.five {
-  bottom: -10px;
-  right: 10%;
-  animation-delay: 0.5s;
-  animation-duration: 4s;
-}
-
-@keyframes floatAround {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  25% {
-    transform: translate(5px, -10px) rotate(15deg);
-  }
-  50% {
-    transform: translate(-10px, 10px) rotate(-10deg);
-  }
-  75% {
-    transform: translate(10px, -5px) rotate(10deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-}
-
-
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      background: #1ec9a0;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
+    .hero-img img {
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #1ec9a0;
+      box-shadow: 0 0 20px rgba(30, 201, 160, 0.4);
+      animation: float 3s ease-in-out infinite;
     }
-
-    .section {
-      padding: 2rem;
-      background: #1a1a26;
-      text-align: center;
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
-
-    .section h2 {
-      color: #1ec9a0;
-      margin-bottom: 1.5rem;
+    .hero-img { position: relative; display: inline-block; }
+    .butterfly-emoji { position: absolute; font-size: 1.5rem; animation: floatAround 6s ease-in-out infinite; z-index: 2; opacity: 0.9; }
+    @keyframes floatAround {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(5px, -10px) rotate(15deg); }
+      50% { transform: translate(-10px, 10px) rotate(-10deg); }
+      75% { transform: translate(10px, -5px) rotate(10deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
     }
-
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .card {
-      background: #2a2a39;
-      padding: 1rem;
-      border-radius: 12px;
-      font-weight: bold;
-      color: #d2f5ef;
-    }
-
-    footer {
-      background: #16161e;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    footer .socials a {
-      color: #9bead8;
-      margin: 0 0.5rem;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    footer .socials a:hover {
-      text-decoration: underline;
-    }
-
+    .btn { display: inline-block; margin-top: 1rem; background: #1ec9a0; color: white; padding: 0.6rem 1.2rem; border-radius: 25px; text-decoration: none; font-weight: bold; }
+    .section { padding: 2rem; background: #1a1a26; text-align: center; }
+    .section h2 { color: #1ec9a0; margin-bottom: 1.5rem; }
+    .cards { display: flex; flex-direction: column; gap: 1rem; }
+    .card { background: #2a2a39; padding: 1rem; border-radius: 12px; font-weight: bold; color: #d2f5ef; }
+    .tools-marquee { background: #12121a; padding: 1rem; }
+    .tools-marquee marquee { color: #1ec9a0; font-size: 1.1rem; font-weight: bold; }
+    footer { background: #16161e; color: white; padding: 1rem; text-align: center; }
+    footer .socials a { color: #9bead8; margin: 0 0.5rem; text-decoration: none; font-size: 0.9rem; }
+    footer .socials a:hover { text-decoration: underline; }
     @media (min-width: 768px) {
-      .hero {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        padding: 3rem 4rem;
-      }
-
-      .hero-img img {
-        width: 220px;
-      }
-
-      .cards {
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .card {
-        width: 200px;
-      }
+      .hero { flex-direction: row; justify-content: space-between; text-align: left; padding: 3rem 4rem; }
+      .hero-img img { width: 220px; }
+      .cards { flex-direction: row; justify-content: center; }
+      .card { width: 200px; }
     }
   </style>
 </head>
@@ -259,27 +119,18 @@
 
   <main class="hero">
     <div class="hero-text">
-      
       <h1><span>HI,</span> I AM LAKSHMI PRIYA</h1>
-
       <h2>Front-end developer</h2>
       <p>Building digital experiences that merge creativity with technology</p>
       <p>Specializing in modern web development and cyber systems</p>
-      <a href="https://www.linkedin.com/in/lakshmipriya-bala-230aa7377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn">Let's Connect</a>
+      <a href="https://www.linkedin.com/in/lakshmipriya-bala-230aa7377" class="btn">Let's Connect</a>
     </div>
     <div class="hero-img">
-       <div class="butterfly-emoji">🦋</div>
-      
-  <!-- Flying Butterflies -->
-  <div class="butterfly-emoji one">🦋</div>
-  <div class="butterfly-emoji two">🦋</div>
-  <div class="butterfly-emoji three">🦋</div>
-  <div class="butterfly-emoji four">🦋</div>
-  <div class="butterfly-emoji five">🦋</div>
-
-  <!-- Profile Image -->
- 
-
+      <div class="butterfly-emoji one">🦋</div>
+      <div class="butterfly-emoji two">🦋</div>
+      <div class="butterfly-emoji three">🦋</div>
+      <div class="butterfly-emoji four">🦋</div>
+      <div class="butterfly-emoji five">🦋</div>
       <img src="lakshmi1.jpg" alt="Developer" />
     </div>
   </main>
@@ -291,6 +142,12 @@
       <div class="card">Backend Development<br/><small>Node.js, Python, MongoDB</small></div>
       <div class="card">UI/UX Design<br/><small>Figma, Photoshop, User Testing</small></div>
     </div>
+  </section>
+
+  <section class="tools-marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      HTML • CSS • Figma 
+    </marquee>
   </section>
 
   <section class="section">
@@ -305,7 +162,6 @@
   <section class="section">
     <h2>Contact</h2>
     <p>Email: nehabala2006@gmail.com</p>
-    
     <a href="#" class="btn">Get In Touch</a>
   </section>
 
@@ -317,5 +173,24 @@
       <a href="#">Twitter</a>
     </div>
   </footer>
+
+  <script>
+    const elements = document.querySelectorAll('.section, .hero-text, .hero-img, .card');
+    elements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(40px)';
+      el.style.transition = 'all 0.8s ease-out';
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
